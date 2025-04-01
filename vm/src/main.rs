@@ -1,4 +1,4 @@
-use std::collections::HashSet;
+use indexmap::IndexSet;
 
 fn main() {
     let instructions = include_str!("../doom.asm")
@@ -7,8 +7,9 @@ fn main() {
 
     let mnemonics = instructions.filter_map(|i| i.split_whitespace().next());
 
-    let unique: HashSet<_> = mnemonics.collect();
+    let unique: IndexSet<_> = mnemonics.collect();
+    let first: Vec<_> = unique.iter().take(50).collect();
 
-    println!("{:#?}", unique);
+    println!("{:#?}", first);
     println!("Unique mnemonics {:#?}", unique.len())
 }
