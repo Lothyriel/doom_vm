@@ -36,9 +36,9 @@ pub extern "C" fn DG_DrawFrame() {
     let img: Vec<_> = buffer
         .iter()
         .flat_map(|p| {
-            let r = (p >> 16) & 255;
-            let g = (p >> 8) & 255;
-            let b = p & 255;
+            let r = p >> 16;
+            let g = p >> 8;
+            let b = *p;
 
             [r as u8, g as u8, b as u8]
         })
