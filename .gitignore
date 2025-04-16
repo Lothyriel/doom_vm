@@ -1,5 +1,5 @@
 target
-doomgeneric/doom
-doomgeneric/doom1.wad
 vm/doom.asm
-doomgeneric/frames
+frames
+doom
+doom1.wad
