@@ -1,5 +1,5 @@
 [package]
-name = "binds"
+name = "rs_bind"
 version = "0.1.0"
 edition = "2024"
 
@@ -7,5 +7,5 @@ edition = "2024"
 image = "0.25.6"
 
 [lib]
-name = "binds"
+name = "rs_bind"
 crate-type = ["cdylib"]
